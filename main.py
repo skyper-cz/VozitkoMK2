@@ -15,7 +15,7 @@ if __name__ == '__main__':
     obaMotory = PiMotor.LinkedMotors(pravyMotor, levyMotor)
 
     klic = ""
-    ipina = "10.42.0.03"
+    ipina = "10.42.0.1"
     port = 5005
     prihlport = port + 20
 
