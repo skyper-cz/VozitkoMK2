@@ -26,8 +26,11 @@ if __name__ == '__main__':
     bsock.bind((ipina, prihlport))
 
     while True:
-        bdata, addr = bsock.recvfrom(1024)
-        klic = bdata.decode('utf-8')
+        bdata, baddr = bsock.recvfrom(1024)
+        klicek = bdata.decode('utf-8')
+        json_data = json.loads(klicek)
+        klic = json_data["klic"]
+
 
         while True:
             data, addr = sock.recvfrom(1024)
