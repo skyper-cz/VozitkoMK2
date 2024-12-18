@@ -15,7 +15,7 @@ if __name__ == '__main__':
     obaMotory = PiMotor.LinkedMotors(pravyMotor, levyMotor)
 
     klic = ""
-    ipina = "10.42.0.1"
+    ipina = "10.42.0.03"
     port = 5005
     prihlport = port + 20
 
@@ -46,7 +46,7 @@ if __name__ == '__main__':
                     sipkaVlevo.off()
                     sipkaVpravo.off()
                     obaMotory.forward(100)
-                    time.sleep(0.1)
+                    time.sleep(0.03)
                     obaMotory.stop()
                     sipkaVpred.off()
                 elif smer_jizdy == "65":
@@ -57,7 +57,7 @@ if __name__ == '__main__':
                     sipkaVpravo.off()
                     levyMotor.reverse(100)
                     pravyMotor.forward(100)
-                    time.sleep(0.1)
+                    time.sleep(0.03)
                     levyMotor.stop()
                     pravyMotor.stop()
                     sipkaVlevo.off()
@@ -68,7 +68,7 @@ if __name__ == '__main__':
                     sipkaVlevo.off()
                     sipkaVpravo.off()
                     obaMotory.reverse(100)
-                    time.sleep(0.1)
+                    time.sleep(0.03)
                     obaMotory.stop()
                     sipkaVzad.off()
                 elif smer_jizdy == "68":
@@ -79,7 +79,7 @@ if __name__ == '__main__':
                     sipkaVpravo.on()
                     levyMotor.forward(100)
                     pravyMotor.reverse(100)
-                    time.sleep(0.1)
+                    time.sleep(0.03)
                     levyMotor.stop()
                     pravyMotor.stop()
                     sipkaVpravo.off()
@@ -90,9 +90,9 @@ if __name__ == '__main__':
                     sipkaVzad.off()
                     sipkaVlevo.on()
                     sipkaVpravo.off()
-                    levyMotor.forward(50)
+                    levyMotor.forward(0)
                     pravyMotor.forward(100)
-                    time.sleep(0.1)
+                    time.sleep(0.03)
                     levyMotor.stop()
                     pravyMotor.stop()
                     sipkaVlevo.off()
@@ -105,8 +105,8 @@ if __name__ == '__main__':
                     sipkaVlevo.off()
                     sipkaVpravo.on()
                     levyMotor.forward(100)
-                    pravyMotor.forward(50)
-                    time.sleep(0.1)
+                    pravyMotor.forward(0)
+                    time.sleep(0.03)
                     levyMotor.stop()
                     pravyMotor.stop()
                     sipkaVpravo.off()
