@@ -38,10 +38,9 @@ if __name__ == '__main__':
             json_data = json.loads(decoded_data)
             smer_jizdy = json_data["smerJizdy"]
             autentifikace = json_data["autentifikace"]
-            print(f"received message: {data}")
 
             if klic == autentifikace:
-
+                print(f"received message: {data}")
                 if smer_jizdy == "87":
                     print("Vpřed")
                     sipkaVpred.on()
@@ -116,5 +115,6 @@ if __name__ == '__main__':
                     sipkaVpred.off()
 
                 elif smer_jizdy == "27":
+                    print("New session")
                     klic = ""
                     break
